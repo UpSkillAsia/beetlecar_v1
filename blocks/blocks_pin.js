@@ -130,7 +130,7 @@ Blockly.defineBlocksWithJsonArray([
 //Motor Start //////////////////////////////
 {
   "type": "stopMotor",
-  "message0": "stopMotor",
+  "message0": "StopMotor",
   "inputsInline": true,
   "previousStatement": null,
   "nextStatement": null,
@@ -140,7 +140,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "moveAward",
-  "message0": "moveForward for  %1 sec at Speed  %2",
+  "message0": "MoveForward for  %1 Second at Speed  %2",
   "args0": [
     {
       "type": "field_number",
@@ -175,7 +175,7 @@ Blockly.defineBlocksWithJsonArray([
 
 {
   "type": "moveBack",
-  "message0": "moveBack for  %1 sec at Speed  %2",
+  "message0": "MoveBack for  %1 Second at Speed  %2",
   "args0": [
     {
       "type": "field_number",
@@ -209,7 +209,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "moveLeft",
-  "message0": "moveLeft for  %1 sec at Speed  %2",
+  "message0": "MoveLeft for  %1 Second at Speed  %2",
   "args0": [
     {
       "type": "field_number",
@@ -243,7 +243,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "moveRight",
-  "message0": "moveRight for  %1 sec at Speed  %2",
+  "message0": "MoveRight for  %1 Second at Speed  %2",
   "args0": [
     {
       "type": "field_number",
@@ -277,7 +277,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "Forward",
-  "message0": "moveForward at Speed  %1",
+  "message0": "MoveForward at Speed  %1",
   "args0": [
     {
       "type": "field_dropdown",
@@ -306,7 +306,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "Backward",
-  "message0": "moveBackward at Speed  %1",
+  "message0": "MoveBackward at Speed  %1",
   "args0": [
     {
       "type": "field_dropdown",
@@ -335,7 +335,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "Left",
-  "message0": "moveLeft at Speed  %1",
+  "message0": "MoveLeft at Speed  %1",
   "args0": [
     {
       "type": "field_dropdown",
@@ -364,7 +364,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "Right",
-  "message0": "moveRight at Speed  %1",
+  "message0": "MoveRight at Speed  %1",
   "args0": [
     {
       "type": "field_dropdown",
@@ -396,18 +396,18 @@ Blockly.defineBlocksWithJsonArray([
 //servo Start ////////////////////////////////
 {
   "type": "servo",
-  "message0": "Servo pin  %1 set angle %2",
+  "message0": "Servo %1 Set Angle %2",
   "args0": [
     {
       "type": "field_dropdown",
       "name": "pin",
       "options": [
         [
-          "up and down",
+          "Up & Down",
           "17"
         ],
         [
-          "tong",
+          "hold",
           "16"
         ]
       ]
@@ -580,7 +580,7 @@ Blockly.defineBlocksWithJsonArray([
 //Buzzer Start ///////////////////////////////
 {
   "type": "buzzer1",
-  "message0": "Buzzer frequency %1 beep %2 sec",
+  "message0": "Buzzer Frequency %1 Beep %2 Second",
   "args0": [
     {
       "type": "field_number",
@@ -601,7 +601,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "buzzer2",
-  "message0": "Buzzer frequency %1 beep",
+  "message0": "Buzzer Frequency %1 Beep",
   "args0": [
     {
       "type": "field_number",
@@ -619,7 +619,7 @@ Blockly.defineBlocksWithJsonArray([
 
 {
   "type": "buzzer3",
-  "message0": "Buzzer stop beep",
+  "message0": "Buzzer Stop Beep",
   "args0": [
     
   ],
@@ -635,52 +635,34 @@ Blockly.defineBlocksWithJsonArray([
 //LED Start //////////////////////////////////
 {        
   "type": "led_onoff",
-  "message0": "LED: %1",
-  "args0":[
-  {
-    "type": "field_dropdown",
-    "name": "pin_trig",
-    "options": [
-      [Blockly.Msg.LED_LIFT_Msg , "1"],
-      [Blockly.Msg.LED_RIGHT_Msg , "2"]
-    ]
-      
-  }
-], 
-"inputsInline": true,
-"previousStatement": null,
-"nextStatement": null,
-"colour": "#27AE60",
-"tooltip": "",
-"helpUrl": ""
-},
-{ 
-"type": "ledoff",
-"message0": "LED: %1",
-"args0":[
-{
-  "type": "field_dropdown",
-  "name": "pin_trig",
-  "options": [
-    [Blockly.Msg.LEFT_OFF , "1"],
-    [Blockly.Msg.RIGHT_OFF, "2"]
-  ]
-    
-}
-], 
-"inputsInline": true,
-"previousStatement": null,
-"nextStatement": null,
-"colour": "#27AE60",
-"tooltip": "",
-"helpUrl": ""
+            "message0": "LED: %1",
+            "args0":[
+            {
+              "type": "field_dropdown",
+              "name": "pin_trig",
+              "options": [
+                [Blockly.Msg.LED_LIFT_Msg , "1"],
+                [Blockly.Msg.LEFT_OFF , "2"],
+                [Blockly.Msg.LED_RIGHT_Msg , "3"],                
+                [Blockly.Msg.RIGHT_OFF , "4"]
+              ]
+                
+            }
+          ], 
+          "inputsInline": true,
+          "previousStatement": null,
+          "nextStatement": null,
+          "colour": "#27AE60",
+          "tooltip": "",
+          "helpUrl": ""
+          
 },
 //LED End ////////////////////////////////////
 
 //Ultrasonic Start ///////////////////////////
 {  
   "type": "ultra_read",
-  "message0": "Ultrasonic read  %1 %2cm.",
+  "message0": "Ultrasonic read  %1 %2 Centimeter.",
   "args0":[
   {
     "type": "field_dropdown",
@@ -748,7 +730,7 @@ Blockly.defineBlocksWithJsonArray([
     {
       "type": "field_colour",
       "name": "tog_color2",
-      "colour": "#00FF00"
+      "colour": "#0000ff"
     }
   ],
   "inputsInline": true,
@@ -774,74 +756,55 @@ Blockly.defineBlocksWithJsonArray([
 
   {
     
-    "type":"button",
-    "message0": "Button: %1 is put",
-    "args0":[
+    "type":"switch",
+        "message0": "Switch: %1 is put",
+        "args0":[
+          {
+            "type" : "field_dropdown",
+            "name" : "pin",
+            "options" : [
+              [
+                Blockly.Msg.buttonA_Msg , "18"
+              ],
+              [
+                Blockly.Msg.buttonB_Msg , "5"
+              ]
+            ]
+          }
+        ],
+      "output": ["Number", "Boolean"],
+      "inputsInline": true,
+      //"peviousStatement": null,
+      //"nextStatement": null,
+      "colour": "#27AE60",
+      "tooltip": "",
+      "helpUrl": ""
+      
+      },
       {
-        "type" : "field_dropdown",
-        "name" : "pin",
-        "options" : [
-          [
-            Blockly.Msg.buttonA_Msg , "18"
-          ],
-          [
-            Blockly.Msg.buttonB_Msg , "5"
-          ]
-        ]
-      }
-    ],
-  "output": ["Number", "Boolean"],
-  "inputsInline": true,
-  //"peviousStatement": null,
-  //"nextStatement": null,
-  "colour": "#27AE60",
-  "tooltip": "",
-  "helpUrl": ""
-  
-  },
-  {
-    "type":"buttonA_toggle",
-    "message0": "Switch: %1 is on ",
-    "args0":[
-      {
-        "type" : "field_dropdown",
-        "name" : "pin",
-        "options" : [
-          [
-            Blockly.Msg.buttonA_Msg , "18"
-          ]
-        ]
-      }
-    ],
-  "output": ["Number", "Boolean"],
-  "inputsInline": true,
-  //"peviousStatement": null,
-  //"nextStatement": null,
-  "colour": "#27AE60",
-  "tooltip": "",
-  "helpUrl": ""
-  },
-  {
-    "type":"buttonB_toggle",
-    "message0": "Switch: %1 is on ",
-    "args0":[
-      {
-        "type" : "field_dropdown",
-        "name" : "pin",
-        "options" : [
-          [
-            Blockly.Msg.buttonB_Msg , "5"
-          ]
-        ]
-      }
-    ],
-  "output": ["Number", "Boolean"],
-  "inputsInline": true,
-  //"peviousStatement": null,
-  //"nextStatement": null,
-  "colour": "#27AE60",
-  "tooltip": "",
-  "helpUrl": ""
+        "type":"switch_toggle",
+        "message0": "Switch: %1 is on ",
+        "args0":[
+          {
+            "type" : "field_dropdown",
+            "name" : "pin",
+            "options" : [
+              [
+                Blockly.Msg.buttonA_Msg , "18"
+              ],
+              [
+                Blockly.Msg.buttonB_Msg , "5"
+              ]
+            ]
+          }
+        ],
+      "output": ["Number", "Boolean"],
+      "inputsInline": true,
+      //"peviousStatement": null,
+      //"nextStatement": null,
+      "colour": "#27AE60",
+      "tooltip": "",
+      "helpUrl": ""
   },
 
 //button End /////////////////////////////////

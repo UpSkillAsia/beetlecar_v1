@@ -28,6 +28,23 @@
             cpu: "ESP32"
         }
     ],
+    examples: [
+        "switch",
+        {
+            name: "on_off_button",
+            files: "example/button_on",
+        },
+        {
+            name: "toggle_switch",
+            files: "example/toggle_sw",
+        },
+        "ultrasonic",
+        {
+            name: "ultrasonic",
+            files: "example/ultra_neo",
+        },
+
+    ],
     usb: [
         { // CP2104
             vendorId: "10C4",
@@ -269,19 +286,14 @@
                          //LED Start //////////////////////////////////
                         {
                             xml: `
-                                <block type="led_onoff">
-                                    <value name="pin_trig">
-                                        <shadow type="math_number">
-                                            <field name="NUM">Left</field>
-                                        </shadow>
-                                    </value>
-                                    <value name="onoff">
-                                        <shadow type="math_number">
-                                            <field name="NUM">1</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
+                            <block type="led_onoff">
+                                <value name="pin_trig">
+                                    <shadow type="math_number">
+                                        <field name="NUM">Left_ON</field>
+                                    </shadow>
+                                </value>
+                            </block>
+                        `
                         },
                         {
                             xml: '<label text="LED_Blink"></label>',
@@ -387,45 +399,28 @@
                         //NeoPixel  End ////////////////////////////////
                         
                         {
-                            xml: '<label text="Button"></label>'
+                            xml: '<label text="switch"></label>',
                         },
-
-                        //Button  Start ////////////////////////////////
                         {
                             xml:`
-                                <block type = "button">
+                                <block type = "switch">
                                     <value name = "pin">
                                         <shadow type = "math_number">
-                                            <field name = "NUM">Button_A</field>
-                                        </shadow>
-                                    </value>
-                                </block>
-                            `
-                        },
-                        //Button  End ////////////////////////////////
-   
-                        {
-                            xml: '<label text="Toggle_Button"></label>'
-                        },
-
-                        //Toggle_Button  Start ///////////////////////
-                        {
-                            xml:`
-                                <block type = "buttonA_toggle">
-                                    <value name = "pin">
-                                        <shadow type = "math_number">
-                                            <field name = "NUM">Button_A</field>
+                                            <field name = "NUM">SW_A</field>
                                         </shadow>
                                     </value>
                                 </block>
                             `
                         },
                         {
+                            xml: '<label text="Toggle_Switch"></label>',
+                        },
+                        {
                             xml:`
-                                <block type = "buttonB_toggle">
+                                <block type = "switch_toggle">
                                     <value name = "pin">
                                         <shadow type = "math_number">
-                                            <fied name = "NUM">Button_B</fied>
+                                            <field name = "NUM">SW_A</field>
                                         </shadow>
                                     </value>
                                 </block>
