@@ -62,7 +62,7 @@
                         //beetle_car Start ///////////////////////////////////////////////
                 {
                     name: "beetle car v1",
-                    icon: "/images/icon/beetle_car.jpg",
+                    icon: "./images/beetle_car.jpg",
                     color: "#e64c3c",
                     blocks: [
                 
