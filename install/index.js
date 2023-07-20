@@ -22,4 +22,4 @@ let loadScript = (f) => {
 //loadScript(`${rootPath}/boards/openbit/index.js`);  // Add OpenBit
 //loadScript(`${rootPath}/boards/kidmotor-v4/index.js`);  // Add KidMotor V4.0
 // loadScript(`${rootPath}/boards/bilimbi/index.js`);  // Add BILIMBI
-loadScript(`${rootPath}/boards/beetlev1/index.js`);  // Add BEETLE V1.0
+loadScript(`${rootPath}/boards/beetlecar_v1/index.js`);  // Add BEETLE V1.0
