@@ -1,4 +1,6 @@
 FOR APPLE USER
+Download MicroBlock for MAC https://bit.ly/3plAuLj
+
 goto /Applications/microBlock IDE.app
 git clone https://github.com/UpSkillAsia/beetlecar_v1.git  
 
