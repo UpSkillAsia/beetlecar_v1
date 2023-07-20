@@ -24,11 +24,11 @@ addBoard({
      ],
     firmware: [
         {
-            name: "MicroPython for ESP32 Dev Board V1.6.0",
-            path: "firmware/MicroPython.for.ESP32.Dev.Board.V1.6.0.bin",
-            version: "V1.6.0",
-            date: "2021-1-30",
-            board: "ESP32 Dev Board",
+            name: "MicroPython for Beetle Car V1.0.0",
+            path: "firmware/MicroPython.for.BeetleCar.V1.0.0.bin",
+            version: "V1.0.0",
+            date: "2023-7-30",
+            board: "Beetle Car",
             cpu: "ESP32"
         }
     ],
