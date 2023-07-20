@@ -1,6 +1,6 @@
 addBoard({
-    id: "esp32-dev-board",
-    name: "ESP32 Dev Board",
+    id: "beetlecar_v1",
+    name: "Beetle Car V1.0",
     description: "",
     image: "images/cover.jpg",
     chip: "ESP32",
