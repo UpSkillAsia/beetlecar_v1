@@ -36,59 +36,59 @@ addBoard({
         "Switch",
         {
             name: "ON OFF Switch",
-            files: "example/button_on",
+            files: "examples/button_on",
         },
         {
             name: "Toggle Switch",
-            files: "example/toggle_sw",
+            files: "examples/toggle_sw",
         },
         "Ultrasonic",
         {
             name: "Ultrasonic",
-            files: "example/ultrasonic_neo",
+            files: "examples/ultrasonic_neo",
         },
         "BlueTooth",
         {
             name: "Bluetooth Command",
-            files: "example/bluetooth_ex",
+            files: "examples/bluetooth_ex",
         },
         "IR_Signal",
         {
             name: "Read IR Signal",
-            files: "example/read_ir",
+            files: "examples/read_ir",
         },
         {
             name: "IR Command",
-            files: "example/ir_remote",
+            files: "examples/ir_remote",
         },
         "Line Tracking",
         {
             name: "Line Tracking",
-            files: "example/exlinetracking",
+            files: "examples/exlinetracking",
         },
         "Line Tracking",
         {
             name: "Buzzer Beep",
-            files: "example/buzzer_beep",
+            files: "examples/buzzer_beep",
         },
         {
             name: "Buzzer Play Song",
-            files: "example/buzzer_song",
+            files: "examples/buzzer_song",
         },
         "Neopixel",
         {
             name: "Rainbow Neopixel",
-            files: "example/neo_rainbow",
+            files: "examples/neo_rainbow",
         },
         "Motor",
         {
             name: "Motor",
-            files: "example/motor_ex",
+            files: "examples/motor_ex",
         },
         "Servo",
         {
             name: "Servo Hold Object",
-            files: "example/servo_ex",
+            files: "examples/servo_ex",
         },
 
 
