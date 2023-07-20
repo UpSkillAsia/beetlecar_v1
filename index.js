@@ -2,7 +2,7 @@ addBoard({
     id: "beetlecar_v1",
     name: "Beetle Car V1.0",
     description: "",
-    image: "images/cover.jpg",
+    image: "images/beetlecar.png",
     chip: "ESP32",
     script: [ 
         
@@ -108,8 +108,8 @@ addBoard({
             blocks: [
                 {
                     
-                    name: "beetle_Car",
-                    icon: "/images/beetle_car.png",
+                    name: "Beetle Car",
+                    icon: "../beetlecar_v1/images/beetlecar.png",
                     color: "#e64c3c",
                     blocks: [
                         
