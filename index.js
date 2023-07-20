@@ -109,7 +109,7 @@ addBoard({
                 {
                     
                     name: "beetle_Car",
-                    icon: "/images/icon/led.png",
+                    icon: "/images/beetle_car.png",
                     color: "#e64c3c",
                     blocks: [
                         
