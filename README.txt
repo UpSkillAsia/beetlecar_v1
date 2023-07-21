@@ -14,3 +14,7 @@ EDIT /Applications/microBlock IDE.app/Contents/Resources/app/microBlock-IDE/mani
      "name": "microBlock IDE for UpSkill",
     "short_name": "microBlock IDE for UpSkill",
 
+
+Flash Firmware
+
+python3 -m esptool -p /dev/tty.wchusbserial1420 --chip esp32 write_flash --flash_mode dio --flash_size detect --flash_freq 40m 0x1000 ./bootloader.bin 0x8000 ./partition-table.bin 0x10000 ./beetleV1_18Jul23.bin 
