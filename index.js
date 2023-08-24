@@ -24,7 +24,6 @@ addBoard({
         "modules/beetlecar.py",
         "modules/beetlecar_BLE.py",
         "modules/beetlecar_IR.py",
-        "modules/beetlecar_OLED.py",
      ],
     firmware: [
         {
