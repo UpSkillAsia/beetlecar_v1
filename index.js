@@ -112,12 +112,18 @@ addBoard({
         }
     ],
     autoCompletion: { },
-    level: [
+   level: [
         {
             name: "Beginner",
             description: "",
             icon: "../kidbright32/images/puzzle.png",
             blocks: [
+                {
+                    
+                    name: "Beetle Car",
+                    icon: "../beetlecar_v1/images/beetlecar.png",
+                    color: "#e64c3c",
+                    blocks: [
                  {
                             xml: '<label text="Beetlecar"></label>'
                             
