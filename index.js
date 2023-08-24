@@ -1,6 +1,6 @@
 addBoard({
-    id: "esp32-dev-board",
-    name: "ESP32 Dev Board",
+    id: "beetlecar_v1",
+    name: "Beetle Car V1.0",
     description: "",
     image: "images/beetlecar.png",
     chip: "ESP32",
@@ -13,23 +13,26 @@ addBoard({
     blocks: [
         "blocks/blocks_pin.js",
         "blocks/blocks_advanced.js",
-
         "blocks/generators_pin.js",
         "blocks/generators_avanced.js",
-        
+       
         "blocks/beetlecar_blocks.js",
         "blocks/beetlecar_gen.js",
 
     ],
     modules: [
+        "modules/beetlecar.py",
+        "modules/beetlecar_BLE.py",
+        "modules/beetlecar_IR.py",
+        "modules/beetlecar_OLED.py",
      ],
     firmware: [
         {
-            name: "MicroPython for ESP32 Dev Board V1.6.0",
-            path: "firmware/MicroPython.for.ESP32.Dev.Board.V1.6.0.bin",
-            version: "V1.6.0",
-            date: "2021-1-30",
-            board: "ESP32 Dev Board",
+            name: "MicroPython for Beetle Car V1.0.0",
+            path: "firmware/MicroPython.for.BeetleCar.V1.0.0.bin",
+            version: "V1.0.0",
+            date: "2023-7-30",
+            board: "Beetle Car",
             cpu: "ESP32"
         }
     ],
@@ -103,7 +106,7 @@ addBoard({
 
 
     ],
-    usb: [
+     usb: [
         { // CP2104
             vendorId: "10C4",
             productId: "EA60"
@@ -116,14 +119,7 @@ addBoard({
             description: "",
             icon: "../kidbright32/images/puzzle.png",
             blocks: [
-                {
-                   
-                    
-                    name: "Beetle Car",
-                    icon: "images/beetlecar.png",
-                    color: "#e64c3c",
-                    blocks: [
-                        {
+                 {
                             xml: '<label text="Beetlecar"></label>'
                             
                         },
