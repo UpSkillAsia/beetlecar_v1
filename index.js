@@ -14,7 +14,7 @@ addBoard({
         "blocks/blocks_pin.js",
         "blocks/blocks_advanced.js",
         "blocks/generators_pin.js",
-        "blocks/generators_avanced.js",
+        "blocks/generators_advanced.js",
        
         "blocks/beetlecar_blocks.js",
         "blocks/beetlecar_gen.js",
