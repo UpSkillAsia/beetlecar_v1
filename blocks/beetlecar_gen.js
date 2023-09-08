@@ -87,16 +87,34 @@
         //Motor End ///////////////////////////////////
         
         // servo Start ////////////////////////////////
-        Blockly.Python['servo'] = function(block) {
-        Blockly.Python.definitions_['from_machine_import_pin'] = 'from machine import Pin,PWM';
-        
-        var value_pin = block.getFieldValue('pin');
-        var value_angle = block.getFieldValue('angle');
-        //var value_pin = Blockly.Python.valueToCode(block, 'pin', Blockly.Python.ORDER_ATOMIC);
-        //var value_angle = Blockly.Python.valueToCode(block, 'angle', Blockly.Python.ORDER_ATOMIC);
-        var code = `PWM(Pin(${value_pin}), freq=50).duty(int(25.57 + (((${value_angle}) / 180.0) * 102.3)))\n`;
-        return code;
-      };
+        Blockly.Python['servo'] = function(block) { //ชื่อที่เราตั้งไว้
+          
+          Blockly.Python.definitions_['import_beetlecar'] = 'import beetlecar';
+          var value_pin = block.getFieldValue('pin');//เรียกค่าจาก %1
+          var value_angle = block.getFieldValue('angle');//เรียกค่า %2
+    
+          var code = ``; //ส่วนโค๊ดbeetlecar.servo(${value_pin}, ${value_angle})\n
+          if (value_pin == '16') {
+            code = `beetlecar.servo_LiftUp(${value_angle})\n`
+          if(value_angle >= 90){
+            code = `beetlecar.servo_LiftUp(90)\n`
+            }
+          if(value_angle <= 0){
+            code = `beetlecar.servo_LiftUp(0)\n`
+          }
+        }
+          else if(value_pin == '17'){
+            code = `beetlecar.servo_Clamp(${value_angle})\n`
+          if(value_angle >= 90){
+            code = `beetlecar.servo_Clamp(90)\n`
+          }
+          if(value_angle <= 0){
+            code = `beetlecar.servo_Clamp(0)\n`
+          }
+        }
+    
+          return code;
+        };
         // servo End //////////////////////////////////
         
         //OLED Start //////////////////////////////////
@@ -635,5 +653,58 @@ Blockly.Python['newstopMotor'] = function(block) {
   Blockly.Python.definitions_['import_beetlecar'] = 'import beetlecar';
   var code = 'beetlecar.stop()\n';
   
+  return code;
+};
+Blockly.Python['led_left'] = function(block) {
+          
+            Blockly.Python.definitions_['import_beetlecar'] = 'import beetlecar';
+          
+              var dropdown_trig = block.getFieldValue('pin_trig');
+              code = '';;
+              if(dropdown_trig == 1){
+                code = `beetlecar.led_left_on()\n`;
+              }else if(dropdown_trig == 2){
+                code = `beetlecar.led_left_off()\n`;
+              }
+              return code;
+            };
+Blockly.Python['led_right'] = function(block) {
+          
+Blockly.Python.definitions_['import_beetlecar'] = 'import beetlecar';
+            
+            var dropdown_trig = block.getFieldValue('pin_trig');
+                code = '';;
+                if(dropdown_trig == 3){
+                  code = `beetlecar.led_right_on()\n`;
+                }else if(dropdown_trig == 4){
+                  code = `beetlecar.led_right_off()\n`;
+                }
+                return code;
+              };
+Blockly.Python['new_motor3'] = function(block) {
+  Blockly.Python.definitions_['import_beetlecar'] = 'import beetlecar';
+
+  var motor = block.getFieldValue('motor');
+  var move = block.getFieldValue('move');
+  var speed = block.getFieldValue('speed');
+
+  if (motor == 'left' && move == 'forward') {
+    code = 'beetlecar.left_forward' + '(' + speed + ')\n';
+
+  }else if(motor == 'left' && move == 'backward'){
+    code = 'beetlecar.left_backward' + '(' + speed + ')\n';
+    
+  }else if(motor == 'right'&& move == 'forward'){
+    code = 'beetlecar.right_forward' + '(' + speed + ')\n';
+    
+  }else if(motor == 'right'&& move == 'backward'){
+    code = 'beetlecar.right_backward' + '(' + speed + ')\n';
+    
+  }else if(motor == 'all'&& move == 'forward'){
+    code = 'beetlecar.all_forward' + '(' + speed + ')\n';
+  }else{
+    code = 'beetlecar.all_backward' + '(' + speed + ')\n';
+    
+  }
   return code;
 };
