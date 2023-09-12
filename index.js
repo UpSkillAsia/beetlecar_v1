@@ -22,8 +22,8 @@ addBoard({
     ],
     modules: [
         "modules/beetlecar.py",
-        "modules/beetlecar_BLE.py",
-        "modules/beetlecar_IR.py",
+        //"modules/beetlecar_BLE.py",
+        //"modules/beetlecar_IR.py",
      ],
     firmware: [
         {
@@ -35,7 +35,7 @@ addBoard({
             cpu: "ESP32"
         }
     ],
-    examples: [
+     examples: [
         "Switch",
         {
             name: "ON OFF Switch",
@@ -50,7 +50,7 @@ addBoard({
             name: "Ultrasonic",
             files: "examples/ultrasonic_neo",
         },
-        "BlueTooth",
+        /*"BlueTooth",
         {
             name: "Bluetooth Command",
             files: "examples/bluetooth_ex",
@@ -63,7 +63,7 @@ addBoard({
         {
             name: "IR Command",
             files: "examples/ir_remote",
-        },
+        },*/
         "Line Tracking",
         {
             name: "Line Tracking",
@@ -94,14 +94,11 @@ addBoard({
             name: "Servo Clamp Object 1",
             files: "examples/servo_ex",
         },
-        /*{
-            name: "Servo Hold Object",
-            files: "examples/HBD_car",
-        },*/
-        {
-            name: "Servo Clamp Object 2",
-            files: "examples/servo_car",
-        },
+        ///{
+        ///    name: "Servo Hold Object",
+        ///    files: "examples/HBD_car",
+       /// },
+       
 
 
     ],
